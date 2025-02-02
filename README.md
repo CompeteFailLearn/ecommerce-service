@@ -1,24 +1,13 @@
-# ecom-service
-# Getting Started
+# E-commerce RESTful Web Service
+This project is an E-commerce RESTful web service that provides endpoints to interact with product data. The backend is powered by PostgreSQL, and the service is built using Spring JPA and Spring MVC. The service supports full CRUD (Create, Read, Update, Delete) operations and returns appropriate HTTP status codes based on the operation outcomes.
 
-### Reference Documentation
-For further reference, please consider the following sections:
+## Features
 
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/3.4.1/maven-plugin)
-* [Create an OCI image](https://docs.spring.io/spring-boot/3.4.1/maven-plugin/build-image.html)
-* [Spring Web](https://docs.spring.io/spring-boot/3.4.1/reference/web/servlet.html)
+- **GET api/products**: Fetches all product data from the PostgreSQL database.
+- **POST api/product**: Allows users to post new product details along with a photo.
+- **GET /product/{id}**: Retrieves the details of a specific product by its ID.
+- **GET /products/search**: Retrieves the details of a specific product by the search query.
+- **PUT /product/{id}**: Updates the details of a specific product by its ID.
+- **DELETE /product/{id}**: Deletes a specific product by its ID.
 
-### Guides
-The following guides illustrate how to use some features concretely:
 
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
-
-### Maven Parent overrides
-
-Due to Maven's design, elements are inherited from the parent POM to the project POM.
-While most of the inheritance is fine, it also inherits unwanted elements like `<license>` and `<developers>` from the parent.
-To prevent this, the project POM contains empty overrides for these elements.
-If you manually switch to a different parent and actually want the inheritance, you need to remove those overrides.
